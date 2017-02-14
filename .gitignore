@@ -2,6 +2,7 @@
 *.o
 *.a
 *.so
+pinky-02
 
 # Folders
 _obj
