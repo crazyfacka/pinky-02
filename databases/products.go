@@ -28,7 +28,7 @@ func openFile(sqlite *ProductsDB) (*sql.DB, error) {
 
 func getProductName(db *sql.DB, productId string) (string, error) {
 	sqlStmt := `
-		SELECT name FROM product WHERE id = ?
+		SELECT name FROM product WHERE id = $id
 	`
 	var name string
 	row := db.QueryRow(sqlStmt, productId)
